@@ -21,14 +21,14 @@ public class WireDrawLine : MonoBehaviour
     private void OnMouseDown()
     {
         Draggin = true;
-        Pos1 = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Pos1 = transform.position;
     }
    
     private void Update()
     {
         if (Draggin)
         {
-            DrawLine(Camera.main.ScreenToWorldPoint(Input.mousePosition));
+            DrawLine(transform.position);
         }
 
     }
